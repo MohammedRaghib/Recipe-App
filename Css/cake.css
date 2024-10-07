@@ -59,3 +59,14 @@ li {
 .save-button:hover {
     background-color: #45a049;
 }
+
+aside {
+    display: flex;
+    justify-content: center;
+}
+
+.icon {
+    background-color: #4CAF50;
+    padding: 5px;
+    border-radius: 50%;
+}
