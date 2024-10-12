@@ -6,6 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cake Recipe</title>
     <link rel="stylesheet" href="Css/cake.css">
+    <script>
+        const recipeContainer = document.querySelector('.recipe-container');
+        const recipeTitle = recipeContainer.querySelector('.recipe-title').textContent;
+        const ingredientsList = recipeContainer.querySelector('.ingredients ul');
+        const ingredients = Array.from(ingredientsList.children).map(li => li.textContent);
+        const instructionsList = recipeContainer.querySelector('.instructions ol');
+        const instructions = Array.from(instructionsList.children).map(li => li.textContent);
+        const imageUrl = recipeContainer.querySelector('.recipe-img').src;
+
+        const recipeData = {
+            title: recipeTitle,
+            ingredients: ingredients,
+            instructions: instructions,
+            imageUrl: imageUrl
+        };
+    </script>
 </head>
 
 <body>
@@ -51,6 +67,7 @@
     <aside>
         <a href="personalrecipe.html"><img src="Images/book.png" alt="" class="icon" height="50px"></a>
     </aside>
+    <script src="Scripts/p.recipe.js"></script>
 </body>
 
 </html>
